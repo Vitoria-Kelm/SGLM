@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>SGLM - Login</title>
+    <h:outputStylesheet name="css/style.css" library="resources"/>
+</h:head>
+<h:body styleClass="login-container">
+    <p:growl id="loginMessages" showDetail="true" />
+    <div class="login-panel">
+        <h2>SGLM</h2>
+        <h3>SISTEMA DE GERENCIAMENTO DE LOGISTICA MILITAR</h3>
+        <h:graphicImage library="resources" name="img/logo-eb-png.png" styleClass="logo-image"/>
+        <h:form id="loginForm">
+            <p:panelGrid columns="1" layout="grid" style="width:100%;">
+                <p:outputLabel for="cmi" value="C.M.I." />
+                <p:inputText id="cmi" value="#{loginBean.cmi}" required="true" requiredMessage="CMI é obrigatório"/>
+
+                <p:outputLabel for="senha" value="Senha" />
+                <p:password id="senha" value="#{loginBean.senha}" required="true" requiredMessage="Senha é obrigatória" feedback="false"/>
+            </p:panelGrid>
+
+            <p:commandButton value="Logar" action="#{loginBean.login()}" update="loginMessages" styleClass="ui-button-success"/>
+            <p:commandButton value="Sair" type="button" onclick="window.close()" styleClass="ui-button-danger"/>
+        </h:form>
+    </div>
+</h:body>
+</html>

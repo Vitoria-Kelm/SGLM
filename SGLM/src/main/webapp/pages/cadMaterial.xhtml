@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/templates/commonLayout.xhtml">
+    <ui:define name="title">Cadastrar Material</ui:define>
+
+    <ui:define name="content">
+        <h3>CADASTRAR MATERIAIS</h3>
+        <h:form>
+            <p:panelGrid columns="2" layout="grid">
+                <p:outputLabel for="nomeMat" value="Nome do Material:" />
+                <p:inputText id="nomeMat" value="#{materialBean.material.nomeMat}" required="true" requiredMessage="Nome é obrigatório"/>
+
+                <p:outputLabel for="tipoMat" value="Tipo de Material:" />
+                <p:inputText id="tipoMat" value="#{materialBean.material.tipoMat}" required="true" requiredMessage="Tipo é obrigatório"/>
+
+                <p:outputLabel for="quantMat" value="Quantidade:" />
+                <p:inputText id="quantMat" value="#{materialBean.material.quantMat}" required="true" requiredMessage="Quantidade é obrigatória" converter="jakarta.faces.Long"/>
+
+                <p:outputLabel for="descricaoMat" value="Descrição:" />
+                <p:inputTextarea id="descricaoMat" value="#{materialBean.material.descricaoMat}" rows="3" cols="30"/>
+            </p:panelGrid>
+
+            <p:commandButton value="Salvar" action="#{materialBean.saveMaterial()}" update="@form messages" icon="pi pi-save"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

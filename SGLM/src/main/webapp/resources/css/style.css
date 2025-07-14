@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+.topbar {
+    background-color: #2e7d32; /* Dark green */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.topbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.topbar .logo-image {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.topbar .logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.topbar .user-info .ui-menubutton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+.layout-wrapper {
+    display: flex;
+    min-height: calc(100vh - 60px); /* Adjust based on topbar height */
+}
+
+.layout-sidebar {
+    width: 250px;
+    background-color: #4caf50; /* Green */
+    color: white;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes footer to bottom */
+}
+
+.layout-sidebar .ui-menu {
+    width: 100%; /* Important for menu items to fill width */
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.layout-sidebar .ui-menuitem-link {
+    color: white !important;
+    padding: 15px 20px !important;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.layout-sidebar .ui-menuitem-link:hover {
+    background-color: #388e3c !important; /* Darker green on hover */
+}
+
+.layout-sidebar .ui-menuitem-icon {
+    margin-right: 10px;
+    color: white !important;
+}
+
+.layout-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #e8f5e9; /* Lighter green/blue for content background */
+}
+
+.content-panel {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    min-height: calc(100vh - 160px); /* Adjust for header/footer and padding */
+    display: flex; /* For centering text */
+    justify-content: center; /* For centering text */
+    align-items: center; /* For centering text */
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8em;
+    color: #c8e6c9; /* Lighter green for footer text */
+}
+
+/* Login Page Specific Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e8f5e9; /* Light green background */
+}
+
+.login-panel {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+.login-panel h2 {
+    color: #2e7d32; /* Dark green */
+    margin-bottom: 25px;
+}
+
+.login-panel h3 {
+    color: #4CAF50; /* Green */
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.login-panel .logo-image {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.login-panel .ui-inputfield {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.login-panel .ui-button {
+    width: 120px;
+    padding: 10px 0;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-panel .ui-button.ui-button-success {
+    background-color: #4CAF50; /* Green for login */
+    color: white;
+    border: none;
+}
+
+.login-panel .ui-button.ui-button-success:hover {
+    background-color: #388E3C;
+}
+
+.login-panel .ui-button.ui-button-danger {
+    background-color: #F44336; /* Red for exit */
+    color: white;
+    border: none;
+}
+
+.login-panel .ui-button.ui-button-danger:hover {
+    background-color: #D32F2F;
+}
+
+/* Data Table styles */
+.ui-datatable .ui-datatable-thead th {
+    background-color: #4CAF50 !important;
+    color: white;
+}
+.ui-datatable .ui-datatable-tbody td {
+    padding: 8px 12px;
+}
+.ui-datatable .ui-datatable-odd {
+    background-color: #f9f9f9;
+}
+.ui-datatable .ui-datatable-even {
+    background-color: #ffffff;
+}
